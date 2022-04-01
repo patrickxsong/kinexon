@@ -16,6 +16,7 @@ const routes: Routes = [
         (m) => m.GeolocationModule
       ),
   },
+  { path: '**', redirectTo: 'drivers', pathMatch: 'full' },
 ];
 
 @NgModule({

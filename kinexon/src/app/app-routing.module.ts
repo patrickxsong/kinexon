@@ -8,7 +8,7 @@ import { DriversComponent } from './drivers/drivers.component';
 const routes: Routes = [
   { path: '', redirectTo: 'drivers', pathMatch: 'full' },
   { path: 'drivers', component: DriversComponent },
-  { path: 'driver/:id', component: DriverDetailsComponent },
+  { path: 'driver/:driverName', component: DriverDetailsComponent },
   {
     path: 'location',
     loadChildren: () =>

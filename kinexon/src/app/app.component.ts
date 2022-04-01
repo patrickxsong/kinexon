@@ -10,6 +10,4 @@ export class AppComponent {
   constructor(private titleService: Title) {
     titleService.setTitle('Kinexon');
   }
-
-  ngOnInit() {}
 }

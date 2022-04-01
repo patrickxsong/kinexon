@@ -8,19 +8,18 @@ import { Car } from '../shared/Data';
   templateUrl: './geolocation.component.html',
   styleUrls: ['./geolocation.component.css'],
 })
-export class GeolocationComponent {
+export class GeolocationComponent implements OnInit {
   cars!: Car[];
   map!: google.maps.Map;
-  infoWindowArr: google.maps.InfoWindow[] = [];
   infoWindow!: google.maps.InfoWindow;
   markers: google.maps.Marker[] = [];
 
   loadMarkers(cars: Car[]) {
-    cars.forEach((car: Car, i) => {
+    cars.forEach((car: Car) => {
       const marker = new google.maps.Marker({
         position: { lat: +car.location[0], lng: +car.location[1] },
         map: this.map,
-        title: `${i + 1}. ${car.driverName}`,
+        title: car.driverName,
       });
 
       this.markers.push(marker);
@@ -39,6 +38,7 @@ export class GeolocationComponent {
     this.infoWindow.close();
     this.infoWindow.setContent(selectedMarker.getTitle());
     this.infoWindow.open(selectedMarker.getMap(), selectedMarker);
+    //for some reason when infoWindow is opened via showDriverInfo, there is black left-border and bottom-border around the close button 'x'.
   }
 
   setMapOnAll(map: google.maps.Map | null) {
@@ -57,12 +57,6 @@ export class GeolocationComponent {
       });
     }, 5000);
   }
-
-  // testTimeout() {
-  //   setInterval(() => {
-  //     console.log('hello from timeout!');
-  //   }, 5000);
-  // }
 
   constructor(private carDataService: CarDataService) {}
 

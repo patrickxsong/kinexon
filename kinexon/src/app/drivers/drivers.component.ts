@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Car } from '../shared/Data';
 import { CarDataService } from '../car-data.service';
+import { i18nMetaToJSDoc } from '@angular/compiler/src/render3/view/i18n/meta';
 
 @Component({
   selector: 'app-drivers',
@@ -30,7 +31,8 @@ export class DriversComponent implements OnInit {
   ngOnInit() {
     this.carDataService.getCarsData().subscribe((data: Car[]) => {
       this.carsData = data;
-      this.filteredCars = data;
+      // this.filteredCars = data;
+      this.filter('');
     });
   }
 }

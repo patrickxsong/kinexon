@@ -19,7 +19,10 @@ export class DriverDetailsComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe((params) => {
       this.carDataService.getCarsData().subscribe((data: Car[]) => {
-        this.car = data[+params['id'] - 1];
+        let idx = data.findIndex(
+          (object: Car) => object.driverName === params['driverName']
+        );
+        this.car = data[idx];
       });
     });
   }

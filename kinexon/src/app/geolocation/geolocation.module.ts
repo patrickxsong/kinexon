@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { GeolocationComponent } from './geolocation.component';
 import { RouterModule, Routes } from '@angular/router';
 
-let routes = [{ path: '', component: GeolocationComponent }];
+let routes: Routes = [{ path: '', component: GeolocationComponent }];
 
 @NgModule({
   declarations: [],

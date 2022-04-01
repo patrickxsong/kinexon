@@ -13,7 +13,9 @@
   <tr *ngFor="let driver of filteredCars; index as i">
     <td>{{ i + 1 }}.</td>
     <td>
-      <a [routerLink]="['/driver/', i + 1]">{{ driver.driverName }}</a>
+      <a [routerLink]="['/driver/', driver.driverName]">{{
+        driver.driverName
+      }}</a>
     </td>
     <td>{{ driver.driverCityOrigin }}</td>
     <td>{{ driver.driverPhone | phonenumber }}</td>

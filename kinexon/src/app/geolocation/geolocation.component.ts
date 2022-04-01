@@ -62,7 +62,7 @@ export class GeolocationComponent implements OnInit {
 
   ngOnInit() {
     let loader = new Loader({
-      apiKey: 'AIzaSyArguLR7RQqKUYEBufnAIl5iwolAXSELDM',
+      apiKey: 'my-api-key'
     });
 
     loader.load().then(() => {

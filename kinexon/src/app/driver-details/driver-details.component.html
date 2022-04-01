@@ -1,0 +1,29 @@
+<h4>{{ car.driverName }}</h4>
+<table>
+  <tr>
+    <td>City Origin:</td>
+    <td>{{ car.driverCityOrigin }}</td>
+  </tr>
+  <tr>
+    <td>Phone No:</td>
+    <td>{{ car.driverPhone | phonenumber }}</td>
+  </tr>
+  <tr>
+    <td>Driver Language:</td>
+    <td>{{ car.driverLanguage | uppercase }}</td>
+  </tr>
+  <tr>
+    <td>Driver Info:</td>
+    <td>{{ car.driverInfo }}</td>
+  </tr>
+  <tr>
+    <td>Car Make:</td>
+    <td>{{ car.carMake }}</td>
+  </tr>
+  <tr>
+    <td>Km Driven:</td>
+    <td>{{ car.kmDriven }} km</td>
+  </tr>
+</table>
+<br />
+<a routerLink="/drivers">Back</a>

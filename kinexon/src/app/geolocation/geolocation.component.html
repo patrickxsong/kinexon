@@ -1,0 +1,69 @@
+<div class="d-flex p-2" id="container">
+  <div class="full" id="map"></div>
+  <div class="list-group" id="list-container">
+    <a class="list-group-item" (click)="showDriverInfo(cars[0])">{{
+      cars[0].driverName
+    }}</a>
+    <a class="list-group-item" (click)="showDriverInfo(cars[1])">{{
+      cars[1].driverName
+    }}</a>
+    <a class="list-group-item" (click)="showDriverInfo(cars[2])">{{
+      cars[2].driverName
+    }}</a>
+    <a class="list-group-item" (click)="showDriverInfo(cars[3])">{{
+      cars[3].driverName
+    }}</a>
+    <a class="list-group-item" (click)="showDriverInfo(cars[4])">{{
+      cars[4].driverName
+    }}</a>
+    <a class="list-group-item" (click)="showDriverInfo(cars[5])">{{
+      cars[5].driverName
+    }}</a>
+    <a class="list-group-item" (click)="showDriverInfo(cars[6])">{{
+      cars[6].driverName
+    }}</a>
+    <a class="list-group-item" (click)="showDriverInfo(cars[7])">{{
+      cars[7].driverName
+    }}</a>
+    <a class="list-group-item" (click)="showDriverInfo(cars[8])">{{
+      cars[8].driverName
+    }}</a>
+    <a class="list-group-item" (click)="showDriverInfo(cars[9])">{{
+      cars[9].driverName
+    }}</a>
+    <a class="list-group-item" (click)="showDriverInfo(cars[10])">{{
+      cars[10].driverName
+    }}</a>
+    <a class="list-group-item" (click)="showDriverInfo(cars[11])">{{
+      cars[11].driverName
+    }}</a>
+    <a class="list-group-item" (click)="showDriverInfo(cars[12])">{{
+      cars[12].driverName
+    }}</a>
+    <a class="list-group-item" (click)="showDriverInfo(cars[13])">{{
+      cars[13].driverName
+    }}</a>
+    <a class="list-group-item" (click)="showDriverInfo(cars[14])">{{
+      cars[14].driverName
+    }}</a>
+    <a class="list-group-item" (click)="showDriverInfo(cars[15])">{{
+      cars[15].driverName
+    }}</a>
+    <a class="list-group-item" (click)="showDriverInfo(cars[16])">{{
+      cars[16].driverName
+    }}</a>
+    <a class="list-group-item" (click)="showDriverInfo(cars[17])">{{
+      cars[17].driverName
+    }}</a>
+    <a class="list-group-item" (click)="showDriverInfo(cars[18])">{{
+      cars[18].driverName
+    }}</a>
+    <a class="list-group-item" (click)="showDriverInfo(cars[19])">{{
+      cars[19].driverName
+    }}</a>
+
+    <!-- not sure what happened but ngFor directive does not appear to be working in this component -->
+    <div *ngFor="let car of cars">where am I?</div>
+    <!-- ^used as test. If someone can tell me why ngFor does not work in this component that would be much appreciated. Appears to be working in drivers component -->
+  </div>
+</div>
